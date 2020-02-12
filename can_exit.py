@@ -1,3 +1,17 @@
+#Input: Maze denoted with grid nxm
+#0 denotes walkable path, 1 denotes wall
+
+"""
+can_exit([
+	[0, 1, 1, 1, 1, 1, 1], 
+	[0, 0, 1, 1, 0, 1, 1], 
+	[1, 0, 0, 0, 0, 1, 1], 
+	[1, 1, 1, 1, 0, 0, 1], 
+	[1, 1, 1, 1, 1, 0, 0]
+]) -> True
+"""
+
+
 def can_exit(lst):
   maze = lst
   #Set goal before passing it to the search function
@@ -30,7 +44,7 @@ def search(row, column, maze):
   #Mark area visited
   maze[row][column] = 3 
 
-  #Gogogogo look right! Then down, then left, then finally up
+  #Look right, then down, then left, then up
   if ((row < len(maze) - 1 and search(row + 1, column, maze))
     or (column > 0 and search(row, column - 1, maze))
     or (row > 0 and search(row - 1, column, maze))
