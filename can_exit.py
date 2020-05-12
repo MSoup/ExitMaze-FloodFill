@@ -11,16 +11,15 @@ can_exit([
 ]) -> True
 """
 
-
 def can_exit(lst):
   maze = lst
-  #Set goal before passing it to the search function
+  #Denote goal = 5
   maze[-1][-1] = 5
   return search(0,0, maze)
 
 def search(row, column, maze):
   print("Scanning", row, column)
-  #Attempting to get a visual of where I am
+  #Get a visual of where I am, where 2 == location
   state = maze[row][column]
   maze[row][column] = 2
   for i in maze:
