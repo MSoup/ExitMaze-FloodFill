@@ -29,7 +29,7 @@ def search(row, column, maze):
   maze[row][column] = state
 
   #False where we visited and walls
-  #Only allow true if exit is found, which should allow True to be returned if Python is nice to me
+  #Only allow true if exit is found
   if maze[row][column] == 5:
     print("Found exit at: ", row, column)
     return True
