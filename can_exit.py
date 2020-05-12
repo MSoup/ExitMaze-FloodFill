@@ -19,7 +19,7 @@ def can_exit(lst):
 
 def search(row, column, maze):
   print("Scanning", row, column)
-  #Get a visual of where I am, where 2 == location
+  #Get a visual of where I am, where 2 = location
   state = maze[row][column]
   maze[row][column] = 2
   for i in maze:
